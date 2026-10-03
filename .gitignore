@@ -1,1 +1,9 @@
+build/
+*.o
+*.out
+*.exe
+test
+.DS_Store
 .vscode/
+OAiP/LR2/Task_*/Task_[0-9]
+OAiP/LR1/Task_*/Task_[0-9]
