@@ -21,12 +21,11 @@ int main() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "\nВы ввели буквы или символы! Нужно вводить только цифры.\n";
-            std::cout << "Нажмите Enter для продолжения...";
+            std::cout << "Нажмите Enter для возврата в меню.";
             std::cin.get();
             continue;
         }
 
-        // >>> ГЛАВНАЯ ПРАВКА: убираем остаток '\n' после ввода числа <<<
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (c) {
@@ -50,8 +49,8 @@ int main() {
     }
     std::cout << std::fixed << std::setprecision(0);
     std::cout << "N = " << sum << std::endl;
-std::cout << "Нажмите Enter для возврата в меню..." << std::endl;
-std::cin.get();   // ждём Enter
+std::cout << "Нажмите Enter для возврата в меню." << std::endl;
+std::cin.get();  
                 break; }
 
             case 2: {
@@ -61,7 +60,8 @@ std::cin.get();   // ждём Enter
 
             default:
                 std::cout << "\nТакого пункта нет. Введите 1 или 2.\n";
-                system("pause");
+                std::cout << "Нажмите Enter для возврата в меню.";
+                std::cin.get();
                 break;
         }
     }

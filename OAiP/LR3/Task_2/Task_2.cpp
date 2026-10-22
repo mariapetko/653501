@@ -22,7 +22,7 @@ int main() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "\nВы ввели буквы или символы! Нужно вводить только цифры.\n";
-            std::cout << "Нажмите Enter для продолжения...";
+            std::cout << "Нажмите Enter для возврата в меню.";
             std::cin.get();
             continue;
         }
@@ -48,7 +48,7 @@ int main() {
     std::cout << "Сумма = " << s << std::endl;
     std::cout << "Количество шагов = " << n - 1 << std::endl; 
     
-std::cout << "Нажмите Enter для возврата в меню..." << std::endl;
+std::cout << "Нажмите Enter для возврата в меню." << std::endl;
 std::cin.get();  
                 break; }
 
@@ -59,7 +59,8 @@ std::cin.get();
 
             default:
                 std::cout << "\nТакого пункта нет. Введите 1 или 2.\n";
-                system("pause");
+                std::cout << "Нажмите Enter для возврата в меню.";
+                std::cin.get();
                 break;
         }
     }
