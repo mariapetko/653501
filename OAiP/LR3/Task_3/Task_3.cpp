@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cmath>
- #include <iomanip>
- #include <limits>
+#include <iomanip>
+#include <limits>
 
 
 int main() {
 
-    int c = 0; 
+    int c = 0;
 
     while (true) {
 
@@ -16,7 +16,7 @@ int main() {
         std::cout << "1. Запустить программу\n";
         std::cout << "2. Выйти из программы\n";
 
-        std::cin >> c; 
+        std::cin >> c;
 
         if (std::cin.fail()) {
             std::cin.clear();
@@ -33,44 +33,47 @@ int main() {
             case 1: {
                 std::cout << "\nПрограмма успешно запущена!\n";
 
+                double A = 0.0;
+                double B = M_PI / 2.0;
+                int M = 20;
 
-    double A = 0.0;
-    double B = M_PI / 2.0; 
-    int M = 20;
-    
-    double H = (B - A) / M; 
+                double H = (B - A) / M;
 
-    std::cout << std::fixed;
+                std::cout << std::fixed;
 
-    for (int i = 0; i <= M; i++) {
-        double Xi = A + i * H;
-         std::cout << "Xi = " << Xi << " "; }
+                for (int i = 0; i <= M; i++) {
+                    double Xi = A + i * H;
+                    std::cout << "Xi = " << Xi << " ";
+                }
 
-         std::cout << "\n"; 
+                std::cout << "\n";
 
-    for (int i = 0; i <= M; i++) {
-        double Xi = A + i * H;
-        double Yi = std::sin(Xi) - std::cos(Xi); 
-         std::cout << "Y = " << Yi << " "; }
+                for (int i = 0; i <= M; i++) {
+                    double Xi = A + i * H;
+                    double Yi = std::sin(Xi) - std::cos(Xi);
+                    std::cout << "Y = " << Yi << " ";
+                }
 
-           std::cout << "\n";
-    
-    
-std::cout << "Нажмите Enter для возврата в меню." << std::endl;
-std::cin.get();  
-                break; }
+                std::cout << "\n";
+
+                std::cout << "Нажмите Enter для возврата в меню." << std::endl;
+                std::cin.get();
+                break;
+            }
 
             case 2: {
                 std::cout << "\nЗавершение работы.\n";
                 system("pause");
-                return 0; 
-                break; }
+                return 0;
+                break;
+            }
 
             default: {
                 std::cout << "\nТакого пункта нет. Введите 1 или 2.\n";
                 std::cout << "Нажмите Enter для возврата в меню.";
                 std::cin.get();
-                break; }
+                break;
+            }
         }
     }
 
